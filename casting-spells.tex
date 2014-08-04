@@ -1,5 +1,6 @@
 \documentclass[utf8x]{beamer}
 
+\usepackage[absolute,overlay]{textpos}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{animate}
@@ -166,10 +167,16 @@
 
   \subsection*{Announce Spell}
     \begin{frame}{Announce Spell}
+      \putat{105}{-80}{\includegraphics[scale=0.1]{Hand}}
+      \putat{185}{-70}{\includegraphics[scale=0.1]{Data_stack}}
+      \putat{239}{-70}{\includegraphics[scale=0.06, angle=90]{LlanowarElves}}
       \begin{itemize}
         \item Announce ``I am casting this spell''
-        \item Move to top of stack
+        \item Move to top of stack (usually from hand)
       \end{itemize}
+      \begin{textblock*}{100pt}(220pt,218pt)
+        $\longrightarrow$
+      \end{textblock*}
     \end{frame}
 
   \subsection*{Choices}
