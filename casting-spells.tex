@@ -1,0 +1,194 @@
+\documentclass[utf8x]{beamer}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{animate}
+\usepackage{beamerthemesplit}
+\usepackage{calc}
+\usepackage{clrscode}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{pgf,tikz}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{verbatim}
+\usetikzlibrary{arrows}
+
+
+\newcounter{lines per second}
+\newcounter{lines per page}
+\newcounter{frames per second}
+\newcounter{total frames}
+\newcounter{total lines}
+\newcommand{\verbfilename}{}
+\newsavebox{\verbbox}
+\newlength{\verbtotalheight}
+\expandafter\newlength\csname verb max offset\endcsname
+\newlength{\verboffsetperframe}
+\newcounter{total time}
+
+% \scrollfile[adjustment]{file name}{total time}{fps}
+\newcommand{\scrollfile}[4][-0.5\textheight]{
+  \setcounter{total time}{#3}
+  \setcounter{frames per second}{#4}
+  \renewcommand{\verbfilename}{#2}
+  \savebox{\verbbox}{\tiny\fvset{fontsize=\tiny}\BVerbatimInput{\verbfilename}}
+  \setlength{\verbtotalheight}{\totalheightof{\usebox{\verbbox}}}
+  \setcounter{total frames}{\value{frames per second} * \value{total time}}
+  \expandafter\setlength\expandafter{\csname verb max offset\endcsname}{\verbtotalheight + #1}
+  \setlength{\verboffsetperframe}{\csname verb max offset\endcsname / \value{total frames}}
+  \hspace*{-1cm}
+  \begin{animateinline}[autoplay]{\the\value{frames per second}}
+    \multiframe{\value{total frames}}{
+      dOffset=-1cm+\the\verboffsetperframe
+    }{%
+    \raisebox{\dOffset}[\height][\depth]{\usebox{\verbbox}}%
+  }
+\end{animateinline}
+}
+
+\pdfinfo {
+  /Title (Casting Spells)
+  /Subject (Casting Spells in Magic: the Gathering)
+  /Author () 
+  /Keywords (Magic, Gathering, Cast, Spells, Comprehensive, Rules, 601)
+}
+
+\begin{document}
+  
+\title{Casting Spells}
+\date{September 6, 2014}
+\author{Bobby Fortanely}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+  
+\section*{Outline}
+  \begin{frame}{Outline}
+    \tableofcontents
+  \end{frame}
+\section{What is a spell?}
+  \subsection*{}
+  
+    \begin{frame}{What is a spell?}
+      \begin{itemize}
+        \item Spells are cards on the stack
+        \item Copies of spells are also spell
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{What can be a spell}
+      \begin{itemize}
+        \item Artifact
+        \item Creature
+        \item Enchantment
+        \item Instant
+        \item Land
+        \item Planeswalker
+        \item Sorcery
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{What can not be a spell}
+      \begin{itemize}
+        \item LANDS
+        \item Conspiracy
+        \item Phenomenon
+        \item Plane
+        \item Scheme
+        \item Vanguard
+      \end{itemize}
+    \end{frame}
+
+\section{Steps of Casting a spell}
+  \subsection*{Steps of Casting a Spell}
+  
+    \begin{frame}{Steps of Casting a Spell}
+      \begin{itemize}
+        \item Announce Spell
+        \item Choices
+        \item Targets
+        \item Distribute
+        \item Determine Cost
+        \item Mana Abilities
+        \item Payment
+      \end{itemize}
+    \end{frame}
+
+  \subsection*{Announce Spell}
+    \begin{frame}{Announce Spell}
+      \begin{itemize}
+        \item Announce ``I am casting this spell''
+        \item Move to top of stack
+      \end{itemize}
+    \end{frame}
+
+  \subsection*{Choices}
+    \begin{frame}{Choices}
+      \begin{itemize}
+        \item Modes
+        \item Splice
+        \item Additional Costs
+        \item Alternative Costs
+        \item Choose X
+        \item Hybrid/Phyrexian Mana
+      \end{itemize}
+    \end{frame}
+
+  \subsection*{Targets}
+    \begin{frame}{Targets}
+      \begin{itemize}
+        \item Choose number of targets, if variable
+        \item Must choose all legal target
+        \item Target same object once per instance of word ``target''
+      \end{itemize}
+    \end{frame}
+
+  \subsection*{Distribute}
+    \begin{frame}{Distribute}
+      \begin{itemize}
+        \item Divide/Distribute
+        \item At least 1 per target
+      \end{itemize}
+    \end{frame}
+
+  \subsection*{Determine Cost}
+    \begin{frame}{Determine Cost}
+      \begin{itemize}
+        \item Apply cost additions
+        \item Then, apply cost reductions
+        \item Finally, apply effects on total costs (Trinisphere)
+      \end{itemize}
+    \end{frame}
+
+  \subsection*{Mana Abilities}
+    \begin{frame}{Mana Abilities}
+      \begin{itemize}
+        \item Activate mana abilites (only if mana required for payment)
+      \end{itemize}
+    \end{frame}
+
+  \subsection*{Payment}
+    \begin{frame}{Payment}
+      Pay costs in any order
+    \end{frame}
+
+  \subsection*{Spell is cast}
+    \begin{frame}{Payment}
+      \begin{itemize}
+        \item Spell becomes cast
+        \item Trigger trigger
+      \end{itemize}
+    \end{frame}
+
+ \section{Additional Examples}
+  \subsection*{Additional Examples}
+  
+    \begin{frame}{Additional Examples}
+      blah
+    \end{frame}
+  
+\end{document}
+  
