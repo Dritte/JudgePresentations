@@ -15,6 +15,8 @@
 \usepackage{verbatim}
 \usetikzlibrary{arrows}
 
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
 
 \newcounter{lines per second}
 \newcounter{lines per page}
@@ -27,6 +29,8 @@
 \expandafter\newlength\csname verb max offset\endcsname
 \newlength{\verboffsetperframe}
 \newcounter{total time}
+
+\newcommand{\putat}[3]{\begin{picture}(0,0)(0,0)\put(#1,#2){#3}\end{picture}}
 
 % \scrollfile[adjustment]{file name}{total time}{fps}
 \newcommand{\scrollfile}[4][-0.5\textheight]{
@@ -77,6 +81,13 @@
         \item Spells are cards on the stack
         \item Copies of spells are also spell
       \end{itemize}
+      \putat{185}{-30}{\includegraphics[scale=0.1]{Data_stack}}
+      \putat{239}{-30}{\includegraphics[scale=0.06, angle=90]{JTMS}}
+      \putat{235}{-20}{\includegraphics[scale=0.06, angle=90]{Counterspell}}
+      \putat{231}{-10}{\includegraphics[scale=0.06, angle=90]{CrypticCommand}}
+      \putat{228}{1}{\includegraphics[scale=0.05, angle=90]{Dissipate}}
+      \putat{225}{11}{\includegraphics[scale=0.06, angle=90]{Syncopate}}
+      \putat{221}{22}{\includegraphics[scale=0.06, angle=90]{ManaDrain}}
     \end{frame}
 
     \begin{frame}{What can be a spell}
@@ -128,12 +139,12 @@
   \subsection*{Choices}
     \begin{frame}{Choices}
       \begin{itemize}
-        \item Modes
-        \item Splice
-        \item Additional Costs
-        \item Alternative Costs
-        \item Choose X
-        \item Hybrid/Phyrexian Mana
+        \item Modes \pause
+        \item Splice \pause
+        \item Additional Costs \pause
+        \item Alternative Costs \pause
+        \item Choose X \pause
+        \item Hybrid/Phyrexian Mana \pause
       \end{itemize}
     \end{frame}
 
