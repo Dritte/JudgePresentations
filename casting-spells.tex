@@ -185,6 +185,7 @@
         \item Modes 
       \only<1>{\putat{90}{-99}{
         \includegraphics[scale=.5]{CrypticCommand}}}
+        % Modes before targets
           \pause
         \item Splice 
       \only<2>{\putat{93}{-82}{
@@ -193,6 +194,8 @@
         \item Additional Costs 
       \only<3>{\putat{45}{-65}{
         \includegraphics[scale=.5]{SilvergillAdept}}}
+       % Mention that this step happens after Silvergill is put on the stack,
+       % otherwise it could be revealed to itself.
           \pause
         \item Alternative Costs 
       \only<4>{\putat{42}{-48}{
@@ -246,6 +249,7 @@
   \subsection*{Determine Cost}
     \begin{frame}{Determine Cost}
       \begin{itemize}
+        \item Start with mana cost
         \item Apply cost additions
       \only<1>{\putat{93}{-81}{
         \includegraphics[scale=.5]{Thalia}}}
@@ -260,11 +264,34 @@
       \end{itemize}
     \end{frame}
 
+    \begin{frame}{Determine Cost}
+      \begin{itemize}
+        \item Calculated cost becomes locked in
+          \pause
+        \item Even if objects modifying the cost stop modifying the cost
+      \end{itemize}
+    \end{frame}
+
+
   \subsection*{Mana Abilities}
     \begin{frame}{Mana Abilities}
       \begin{itemize}
         \item Activate mana abilites \pause (only if mana required for payment)
       \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Mana Abilities}
+        \putat{59}{-65}{
+        \includegraphics[scale=.5]{BlackLotus}}
+        \putat{159}{-65}{
+        \includegraphics[scale=.5]{Frogmite}}
+    \end{frame}
+
+    \begin{frame}{Mana Abilities}
+        \putat{59}{-65}{
+        \includegraphics[scale=.5]{AltarsReap}}
+        \putat{159}{-65}{
+        \includegraphics[scale=.5]{Thalia}}
     \end{frame}
 
   \subsection*{Payment}
@@ -284,6 +311,11 @@
       \end{itemize}
         \putat{137}{-43}{
         \includegraphics[scale=.5]{YoungPyromancer}}
+        \putat{237}{-43}{
+        \includegraphics[scale=.5]{LightningBolt}}
+        \pause
+        \putat{233}{-43}{
+        \includegraphics[scale=.5]{Fling}}
     \end{frame}
 
     \begin{frame}{Review Steps of Casting a Spell}
